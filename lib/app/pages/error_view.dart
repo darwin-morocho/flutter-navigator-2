@@ -25,7 +25,7 @@ class ErrorView extends StatelessWidget {
             ),
             MaterialButton(
               onPressed: () {
-                GoRouter.of(context).pushReplacementNamed(
+                context.pushReplacementNamed(
                   Routes.home,
                 );
               },

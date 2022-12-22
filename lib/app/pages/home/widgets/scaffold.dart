@@ -46,17 +46,17 @@ class _HomeScaffoldState extends State<HomeScaffold> {
           valueListenable: counter,
           builder: (_, value, __) {
             return AppBar(
-              leading: value > 0 && GoRouter.of(context).canPop()
+              leading: value > 0 && context.canPop()
                   ? BackButton(
                       onPressed: () {
-                        GoRouter.of(context).pop();
+                        context.pop();
                       },
                     )
                   : null,
               actions: [
                 IconButton(
                   onPressed: () {
-                    GoRouter.of(context).pushNamed(
+                    context.pushNamed(
                       Routes.profile,
                     );
                   },

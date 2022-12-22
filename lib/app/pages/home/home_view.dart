@@ -43,7 +43,7 @@ class _HomeViewState extends State<HomeView> {
           return Card(
             child: InkWell(
               onTap: () {
-                GoRouter.of(context).pushNamed(
+                context.pushNamed(
                   Routes.product,
                   params: {
                     'id': product.id.toString(),

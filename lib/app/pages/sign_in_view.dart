@@ -18,7 +18,7 @@ class SignInView extends StatelessWidget {
         child: TextButton(
           onPressed: () {
             context.read<SessionController>().setSignedIn(true);
-            GoRouter.of(context).pushReplacement(callbackURL);
+            context.go(callbackURL);
           },
           child: const Text('sign in'),
         ),

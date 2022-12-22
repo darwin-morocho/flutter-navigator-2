@@ -18,7 +18,7 @@ class ProfileView extends StatelessWidget {
         child: TextButton(
           onPressed: () {
             context.read<SessionController>().setSignedIn(false);
-            GoRouter.of(context).goNamed(Routes.signIn);
+            context.goNamed(Routes.signIn);
           },
           child: const Text('Sign out'),
         ),
