@@ -1,8 +1,9 @@
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-import '../models/product.dart';
-import '../my_app.dart';
+import '../../models/product.dart';
+import '../../router/routes.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -34,18 +35,19 @@ class _HomeViewState extends State<HomeView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: ListView.builder(
+    return Container(
+      color: Colors.white,
+      child: ListView.builder(
         itemBuilder: (_, index) {
           final product = _list[index];
           return Card(
             child: InkWell(
               onTap: () {
-                final myAppState =
-                    context.findAncestorStateOfType<MyAppState>();
-                myAppState?.delegate.setNewRoutePath(
-                  Uri.parse('/product/${product.id}'),
+                GoRouter.of(context).pushNamed(
+                  Routes.product,
+                  params: {
+                    'id': product.id.toString(),
+                  },
                 );
               },
               child: Column(
