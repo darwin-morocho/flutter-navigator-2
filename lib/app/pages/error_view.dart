@@ -25,8 +25,8 @@ class ErrorView extends StatelessWidget {
             ),
             MaterialButton(
               onPressed: () {
-                context.pushReplacementNamed(
-                  Routes.home,
+                context.goNamed(
+                  Routes.red,
                 );
               },
               child: const Text('Go to home'),

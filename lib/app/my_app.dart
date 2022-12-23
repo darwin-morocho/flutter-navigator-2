@@ -4,7 +4,11 @@ import 'pages/splash_view.dart';
 import 'router/router.dart';
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({
+    super.key,
+    required this.initialAppLink,
+  });
+  final Uri? initialAppLink;
 
   @override
   State<MyApp> createState() => _MyAppState();

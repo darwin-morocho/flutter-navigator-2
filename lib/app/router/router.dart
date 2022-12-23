@@ -24,8 +24,12 @@ mixin RouterMixin on State<MyApp> {
 
   GoRouter get router {
     _router ??= GoRouter(
-      initialLocation: '/red',
+      initialLocation: widget.initialAppLink?.toString() ?? '/red',
       navigatorKey: rootNavigatorKey,
+      redirect: (context, state) {
+        print(state.error);
+        return null;
+      },
       errorBuilder: (_, state) => ErrorView(
         goRouterState: state,
       ),

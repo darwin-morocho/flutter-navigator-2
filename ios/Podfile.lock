@@ -1,19 +1,25 @@
 PODS:
+  - app_links (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
   - shared_preferences_ios (0.0.1):
     - Flutter
 
 DEPENDENCIES:
+  - app_links (from `.symlinks/plugins/app_links/ios`)
   - Flutter (from `Flutter`)
   - shared_preferences_ios (from `.symlinks/plugins/shared_preferences_ios/ios`)
 
 EXTERNAL SOURCES:
+  app_links:
+    :path: ".symlinks/plugins/app_links/ios"
   Flutter:
     :path: Flutter
   shared_preferences_ios:
     :path: ".symlinks/plugins/shared_preferences_ios/ios"
 
 SPEC CHECKSUMS:
+  app_links: ab4ba54d10a13d45825336bc9707b5eadee81191
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   shared_preferences_ios: 548a61f8053b9b8a49ac19c1ffbc8b92c50d68ad
 

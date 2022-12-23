@@ -1,0 +1,13 @@
+{
+   "applinks":{
+     "apps":[],
+     "details":[
+        {
+           "appID":"4X8W3GTB3N.app.meedu.navigator2",
+           "paths":[
+            "*"
+           ]
+        }
+     ]
+   } 
+}
